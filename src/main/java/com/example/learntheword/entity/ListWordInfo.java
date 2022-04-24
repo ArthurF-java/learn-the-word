@@ -14,16 +14,16 @@ import javax.persistence.SequenceGenerator;
 @Entity
 @Setter
 @Getter
-public class LearningInfo extends AbstractEntity{
+public class ListWordInfo extends AbstractEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "learning_list_info_id_seq")
-    @SequenceGenerator(name = "learning_list_info_id_seq", sequenceName = "learning_list_info_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "list_word_info_id_seq")
+    @SequenceGenerator(name = "list_word_info_id_seq", sequenceName = "list_word_info_id_seq", allocationSize = 1)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "learning_list_id", nullable = false)
-    private LearningList learningList;
+    @JoinColumn(name = "list_word_id", nullable = false)
+    private ListWord listWord;
 
     @ManyToOne
     @JoinColumn(name = "word_id", nullable = false)

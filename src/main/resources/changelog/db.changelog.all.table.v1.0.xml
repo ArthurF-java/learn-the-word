@@ -53,9 +53,9 @@
         </createTable>
     </changeSet>
     <changeSet id="20220424-5" author="Arthur">
-        <createTable tableName="learning_list">
+        <createTable tableName="list_word">
             <column name="id" type="bigint" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_learning_list"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_list_word"/>
             </column>
             <column name="account_id" type="bigint">
                 <constraints foreignKeyName="fk_account_id" references="account(id)"/>
@@ -65,12 +65,12 @@
         </createTable>
     </changeSet>
     <changeSet id="20220424-6" author="Arthur">
-        <createTable tableName="learning_info">
+        <createTable tableName="list_word_info">
             <column name="id" type="bigint" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_learning_info"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_list_word_info"/>
             </column>
-            <column name="learning_list_id" type="bigint">
-                <constraints foreignKeyName="fk_learning_list_id" references="learning_list(id)"/>
+            <column name="list_word_id" type="bigint">
+                <constraints foreignKeyName="fk_list_word_id" references="list_word(id)"/>
             </column>
             <column name="word_id" type="bigint">
                 <constraints foreignKeyName="fk_word_id" references="word(id)"/>

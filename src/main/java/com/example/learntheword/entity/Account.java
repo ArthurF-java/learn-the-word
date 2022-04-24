@@ -29,7 +29,7 @@ public class Account extends AbstractEntity{
     private Set<WordRating> wordRatings;
 
     @OneToMany(mappedBy = "account")
-    private Set<LearningList> learningLists;
+    private Set<ListWord> listWords;
 
     private String firstName;
     private String lastName;

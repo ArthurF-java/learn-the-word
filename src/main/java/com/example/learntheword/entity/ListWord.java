@@ -17,19 +17,19 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-public class LearningList extends AbstractEntity{
+public class ListWord extends AbstractEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "learning_list_id_seq")
-    @SequenceGenerator(name = "learning_list_id_seq", sequenceName = "learning_list_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "list_word_id_seq")
+    @SequenceGenerator(name = "list_word_id_seq", sequenceName = "list_word_id_seq", allocationSize = 1)
     private Long id;
 
     @ManyToOne
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
-    @OneToMany(mappedBy = "learningList")
-    private Set<LearningInfo> learningInfos;
+    @OneToMany(mappedBy = "listWord")
+    private Set<ListWordInfo> listWordInfos;
 
     private Integer counter = 0;
     private TranslateType translateType;

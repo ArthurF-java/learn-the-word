@@ -23,7 +23,7 @@ public class ListWordServiceImpl implements ListWordService {
     private final AccountService accountService;
 
     @Override
-    public List<ListWordDto> getAllByAccountId(final Long accountId) {
+    public List<ListWordDto> getAllWordListsByAccountId(final Long accountId) {
         return listWordMapper.toDtoList(listWordRepository.findAllByAccountId(accountId));
     }
 

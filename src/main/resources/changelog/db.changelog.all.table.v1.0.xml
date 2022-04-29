@@ -61,7 +61,10 @@
                 <constraints foreignKeyName="fk_account_id" references="account(id)"/>
             </column>
             <column name="counter" type="int"/>
-            <column name="translateType" type="varchar(250)"/>
+            <column name="translate_type" type="varchar(250)"/>
+            <column name="name" type="varchar(250)"/>
+            <column name="modified_date" type="datetime" autoIncrement="false"/>
+            <column name="created_date" type="datetime" autoIncrement="false"/>
         </createTable>
     </changeSet>
     <changeSet id="20220424-6" author="Arthur">
@@ -76,6 +79,8 @@
                 <constraints foreignKeyName="fk_word_id" references="word(id)"/>
             </column>
             <column name="counter" type="int"/>
+            <column name="modified_date" type="datetime" autoIncrement="false"/>
+            <column name="created_date" type="datetime" autoIncrement="false"/>
         </createTable>
     </changeSet>
     <changeSet id="20220424-7" author="Arthur">
@@ -90,6 +95,8 @@
                 <constraints foreignKeyName="fk_word_id" references="word(id)"/>
             </column>
             <column name="rating" type="int"/>
+            <column name="modified_date" type="datetime" autoIncrement="false"/>
+            <column name="created_date" type="datetime" autoIncrement="false"/>
         </createTable>
     </changeSet>
 

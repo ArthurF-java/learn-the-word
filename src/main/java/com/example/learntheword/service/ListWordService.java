@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ListWordService {
 
-    List<ListWordDto> getAllByAccountId(Long accountId);
+    List<ListWordDto> getAllWordListsByAccountId(Long accountId);
 
     ListWordDto createListWord(ListWordDto listWordDto);
 

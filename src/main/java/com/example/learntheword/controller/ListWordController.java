@@ -13,13 +13,13 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/learning-list")
+@RequestMapping("/list-words")
 public class ListWordController {
 
     private final ListWordService learningListService;
 
-    @GetMapping(value = "account/{accountId}")
+    @GetMapping(value = "accounts/{accountId}")
     public ResponseEntity<List<ListWordDto>> getAllLearningListByAccount(@PathVariable final Long accountId) {
-        return ResponseEntity.ok().body(learningListService.getAllByAccountId(accountId));
+        return ResponseEntity.ok().body(learningListService.getAllWordListsByAccountId(accountId));
     }
 }

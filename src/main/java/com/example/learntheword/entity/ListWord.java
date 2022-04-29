@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,6 +33,8 @@ public class ListWord extends AbstractEntity{
     @OneToMany(mappedBy = "listWord")
     private Set<ListWordInfo> listWordInfos;
 
+    private String name;
     private Integer counter = 0;
+    @Enumerated(EnumType.STRING)
     private TranslateType translateType;
 }

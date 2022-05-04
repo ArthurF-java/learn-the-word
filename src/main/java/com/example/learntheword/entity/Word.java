@@ -32,4 +32,5 @@ public class Word  extends AbstractEntity{
     private String translate;
     @Enumerated(EnumType.STRING)
     private TranslateType translateType;
+    private boolean verified = false;
 }
